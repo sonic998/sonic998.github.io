@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Shadow - Scripts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css" media="all" />
+    <script src="main.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+ <script>
+ 	function CopyMain()
+ {
+ 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Granny_Main_UI'\nloadstring(game:HttpGet('https://raw.githubusercontent.com/sonic998/Shadow-Scripts/refs/heads/main/script.lua'))()";
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("Script Copied Paste in executor with Main UI");
+    }
+    function CopyBlackWhiteOGUI()
+ {
+ 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Black_White_UI'\nloadstring(game:HttpGet('https://raw.githubusercontent.com/sonic998/Shadow-Scripts/refs/heads/main/script.lua'))()";
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("Script Copied Paste in executor with Black White OG UI");
+    }
+    function CopyKavoUI()
+ {
+ 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Kavo_UI'\nloadstring(game:HttpGet('https://raw.githubusercontent.com/sonic998/Shadow-Scripts/refs/heads/main/script.lua'))()";
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("Script Copied Paste in executor with Kavo UI");
+    }
+ </script>
+  <body>
+      <div class="SelectionButtons">
+        <button onclick="window.open('../index.html')">Back</button>
+        <button onclick="window.open('SupportedGameslist.html')">Supported Games</button>
+        <button onclick="window.open('../Web-Games/index.html')">Web Games</button>
+    </div> 
+    <div style="text-align: center;">
+      <h1>Welcome to Shadow</h1>
+      <p>Choose an UI</p>
+      <p>Main UI(default)</p>
+      <button class="ButtonStyle" onclick="CopyMain()">Copy Script</button>
+      <p>Black White OG UI</p>
+      <button class="ButtonStyle" onclick="CopyBlackWhiteOGUI()">Copy Script</button>
+      <p>Kavo UI</p>
+      <button class="ButtonStyle" onclick="CopyKavoUI()">Copy Script</button>
+      </div>
+      </body>
+</html>
