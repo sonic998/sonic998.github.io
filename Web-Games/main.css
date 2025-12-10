@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+
+background: url("../Shadow.jpg") no-repeat center center;
+background-size: cover;
+}
+
+h1 {
+  color: white;
+}
+
+button {
+  background-color: #303030;
+  color: white;
+  border-radius: 25px;
+  border: none;
+}
+
+.SelectionButtons {
+	overflow: transparent;
+	text-align: center;
+}
+
+.SelectionButtons button {
+	border-radius: 5px;
+	background-color: darkblue;
+	color: white;
+	border: none;
+	font-size: 20px;
+}
+
+.ButtonStyle {
+	border-radius: 5px;
+	background-color: darkblue;
+	color: white;
+	border: none;
+	font-size: 20px;
+}
