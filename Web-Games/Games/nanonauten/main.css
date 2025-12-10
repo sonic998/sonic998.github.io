@@ -1,0 +1,13 @@
+.Btn {
+    background-color: #353535;
+    color: white;
+    border-radius: 50px;
+    width: 130px;
+    height: 60px;
+}
+
+.InvisBtn {
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
