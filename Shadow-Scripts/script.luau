@@ -53,16 +53,21 @@ local supported = false
 getgenv().address = "https://sonic998.github.io/Shadow-Scripts"
 getgenv().event = ""
 --christmas
---getgenv().event = "🎄"
+--getgenv().event = "ðŸŽ„"
 --easter
---getgenv().event = "🥚"
+--getgenv().event = "ðŸ¥š"
 
 --// Main Loader
 for scriptName, placeId in pairs(getgenv().games.public) do
 if game.PlaceId == placeId then
 supported = true
 local scriptURL = string.format("%s/Scripts/%s", getgenv().address, scriptName)
-loadstring(game:HttpGet(scriptURL))()
+if isfile("Drinkhax_cached") then
+loadfile(Drinkhax_cached)()
+else
+writefile("Drinkhax_cached", game:HttpGet(scriptURL))
+loadfile(Drinkhax_cached)()
+end
 --if getgenv().versions.Bee_Swarm_Simulator = "v1.00" and isfile("Bee_Swarm_Simulator_cached") then
 --loadfile(scriptName)()
 --else
