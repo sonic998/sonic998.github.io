@@ -63,10 +63,10 @@ if game.PlaceId == placeId then
 supported = true
 local scriptURL = string.format("%s/Scripts/%s", getgenv().address, scriptName)
 if isfile("Drinkhax_cached") then
-loadfile(Drinkhax_cached)()
+loadfile("Drinkhax_cached")()
 else
 writefile("Drinkhax_cached", game:HttpGet(scriptURL))
-loadfile(Drinkhax_cached)()
+loadfile("Drinkhax_cached")()
 end
 --if getgenv().versions.Bee_Swarm_Simulator = "v1.00" and isfile("Bee_Swarm_Simulator_cached") then
 --loadfile(scriptName)()
