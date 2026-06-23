@@ -28,8 +28,7 @@ CreatorIdPublicGames = {
 
 local supported = false
 
---getgenv().address = "https://sonic998.github.io/Shadow-Scripts"
-getgenv().address = "http://localhost:8000/GrannyHub"
+getgenv().address = "https://sonic998.github.io/Shadow-Scripts"
 
 
 getgenv().event = ""
