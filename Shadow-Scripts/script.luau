@@ -1,25 +1,3 @@
-getgenv().versions = {
-["Bee_Swarm_Simulator"] = "v1.00",
-["Blood_Moon_Tycoon"] = "v1.00",
-["Drinkhax"] = "v1.00",
-["Fast_Lifting_Simulator"] = "v1.00",
-["Burping_Simulator_2"] = "v1.00",
-["Growing_Simulator"] = "v1.00", --// Phoenix Studios
-["Innovation_Inc_Arctic_Base"] = "v1.00",
-["Innovation_Inc_Spaceship"] = "v1.00",
-["Lift_Legends_Simulator"] = "v1.00",
-["Lift_Vehicles"] = "v1.00",
-["Lifting_Simulator"] = "v1.00",
-["Lumber_Simulator_2"] = "v1.00",
-["Ninja_Legends"] = "v1.00",
-["No_Limit_Lifting_Simulator"] = "v1.00",
-["Rabbit_Simulator"] = "v1.00",
-["Robotic_Simulator"] = "v1.00",
-["Titan_Simulator"] = "v1.00",
-["Weight_Champion"] = "v1.00",
-["Zombie_Attack"] = "v1.00",
-}
-
 --// Games
 getgenv().games = {
 public = {
@@ -58,28 +36,12 @@ for scriptName, placeId in pairs(getgenv().games.public) do
 if game.PlaceId == placeId then
 supported = true
 local scriptURL = string.format("%s/Scripts/%s", getgenv().address, scriptName)
-if isfile("GrannyHub/Cache/"..scriptName) then
-loadfile("GrannyHub/Cache/"..scriptName)()
-else
-writefile("GrannyHub/Cache/"..scriptName, game:HttpGet(scriptURL))
-loadfile("GrannyHub/Cache/"..scriptName)()
-end
---if getgenv().versions.Bee_Swarm_Simulator = "v1.00" and isfile("Bee_Swarm_Simulator_cached") then
---loadfile(scriptName)()
---else
---writefile(scriptName, game:HttpGet(scriptURL))
---loadfile(scriptName)()
---end
+loadstring(game:HttpGet(scriptURL))()
 end
 end
 
 --// Unsupported Game
 if supported == false then
 local UnsupportedscriptURL = string.format("%s/Scripts/%s", getgenv().address, "Unsupported Game.luau")
-if isfile("Unsupported_Game_Cached") then
-loadfile("Unsupported_Game_Cached")()
-else
-writefile("Unsupported_Game_Cached", game:HttpGet(UnsupportedscriptURL))
-loadfile("Unsupported_Game_Cached")()
-end
+loadstring(game:HttpGet(UnsupportedscriptURL))()
 end
