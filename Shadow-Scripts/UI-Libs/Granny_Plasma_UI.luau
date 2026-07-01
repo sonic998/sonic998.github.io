@@ -211,7 +211,7 @@ function lib:CreateWindow(titleee)
 
 		local Sections = {}
 
-		function Sections:NewSections(name)
+		function Sections:NewSection(name)
 			local SectionContainer = Instance.new("ScrollingFrame")
 			local SectionList = Instance.new("UIListLayout")
 
