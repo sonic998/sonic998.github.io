@@ -8,9 +8,20 @@
     <script src="main.js" type="text/javascript" charset="utf-8"></script>
   </head>
  <script>
- 	function CopyMain()
+ function CopyPlasma()
  {
- 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Granny_Main_UI'\nloadstring(game:HttpGet('https://sonic998.github.io/Shadow-Scripts/script.luau'))()";
+ 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Granny_Plasma_UI'\nloadstring(game:HttpGet('https://raw.githubusercontent.com/sonic998/Shadow-Scripts/refs/heads/main/script.lua'))()";
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("Script Copied Paste in executor with Main UI");
+    }
+ 	function CopyResistance()
+ {
+ 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Granny_Main_UI'\nloadstring(game:HttpGet('https://raw.githubusercontent.com/sonic998/Shadow-Scripts/refs/heads/main/script.lua'))()";
     const textarea = document.createElement("textarea");
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -21,7 +32,7 @@
     }
     function CopyBlackWhiteOGUI()
  {
- 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Black_White_UI'\nloadstring(game:HttpGet('https://sonic998.github.io/Shadow-Scripts/script.luau'))()";
+ 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Black_White_UI'\nloadstring(game:HttpGet('https://raw.githubusercontent.com/sonic998/Shadow-Scripts/refs/heads/main/script.lua'))()";
     const textarea = document.createElement("textarea");
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -32,7 +43,7 @@
     }
     function CopyKavoUI()
  {
- 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Kavo_UI'\nloadstring(game:HttpGet('https://sonic998.github.io/Shadow-Scripts/script.luau'))()";
+ 	const text = "--[[\nGranny on top\nAlways bringing high quality scripts\n--]]\ngetgenv().lib = 'Kavo_UI'\nloadstring(game:HttpGet('https://raw.githubusercontent.com/sonic998/Shadow-Scripts/refs/heads/main/script.lua'))()";
     const textarea = document.createElement("textarea");
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -51,12 +62,14 @@
     <div style="text-align: center;">
       <h1>Welcome to Shadow</h1>
       <p>Choose an UI</p>
-      <p>Main UI(default)</p>
-      <button class="ButtonStyle" onclick="CopyMain()">Copy Script</button>
+      <p>Plasma UI</p>
+      <button class="ButtonStyle" onclick="CopyPlasma()">Copy Script</button>
+      <p>Resistance UI</p>
+      <button class="ButtonStyle" onclick="CopyResistance()">Copy Script</button>
       <p>Black White OG UI</p>
       <button class="ButtonStyle" onclick="CopyBlackWhiteOGUI()">Copy Script</button>
       <p>Kavo UI</p>
       <button class="ButtonStyle" onclick="CopyKavoUI()">Copy Script</button>
       </div>
       </body>
-      </html>
+</html>
