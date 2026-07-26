@@ -429,7 +429,7 @@ local antikick = MiscSection:NewToggle("Anti Kick", function(v)
 	if getgenv().initializing then return end
 	getgenv().config.antikick = v
 	Save()
-	ocal mt = getrawmetatable(game)
+	local mt = getrawmetatable(game)
     local old = mt.__namecall
     local protect = newcclosure or protect_function
 
