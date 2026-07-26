@@ -444,7 +444,6 @@ local antikick = MiscSection:NewToggle("Anti Kick", function(v)
     end)
     hookfunction(game.Players.LocalPlayer.Kick,protect(function() wait(9e9) end))
 end)
-end)
 
 MiscSection:NewLabel("---Admin Scripts---")
 
