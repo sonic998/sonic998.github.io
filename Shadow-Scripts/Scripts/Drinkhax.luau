@@ -1,7 +1,7 @@
 -- Load External UI Library
 local UIUrl = string.format("%s/UI-Libs/%s", getgenv().address, getgenv().lib..".luau")
 local Library = loadstring(game:HttpGet(UIUrl))()
-local gui = Library:CreateWindow(getgenv().event .. "IM BACK BOYS to burping simulator 2 cant tell you what my alt is" .. getgenv().event)
+local gui = Library:CreateWindow(getgenv().event .. "GrannyHub - Drinkhax" .. getgenv().event)
 
 -- Config with all possible toggles
 getgenv().config = {
